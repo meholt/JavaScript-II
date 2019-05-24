@@ -1,6 +1,27 @@
 // ==== Challenge 1: Write your own closure ====
 // Write a simple closure of your own creation.  Keep it simple!
 
+function state() {
+  const homeState = "Hawaii";
+  console.log(`I was born in the state of ${homeState}!`);
+
+  function county() {
+    const countyName = "City and County of Honolulu";
+    console.log(`The ${countyName} is located in the state of ${homeState}.`);
+
+    function city() {
+      const homeCity = "Aiea";
+      console.log(`My home city of ${homeCity} is in the ${countyName} in the state of ${homeState}.`);
+    }
+
+
+    city();
+  }
+
+  county();
+}
+
+state();
 
 /* STRETCH PROBLEMS, Do not attempt until you have completed all previous tasks for today's project files */
 
