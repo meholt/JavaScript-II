@@ -45,24 +45,49 @@ last(items, function(lastItem) {
 
 function sumNums(x, y, cb) {
   // sumNums adds two numbers (x, y) and passes the result to the callback.
-  return cb(result);
+  let sum = x + y;
+  return cb(sum);
 }
 
-sumNums(x, y) {
-  let result = x + y;
-  return result;
+function cb(sum) {
+  console.log(sum);
 }
 
-sumNums(0, 5);
+sumNums(2, 3, cb);
 
 function multiplyNums(x, y, cb) {
   // multiplyNums multiplies two numbers and passes the result to the callback.
+  let product = x * y;
+  return cb(product)
 }
 
-function contains(item, list, cb) {
+function cb(product) {
+  console.log(product);
+}
+
+multiplyNums(2, 3, cb);
+
+function contains(item, items, cb) {
   // contains checks if an item is present inside of the given array/list.
   // Pass true to the callback if it is, otherwise pass false.
+  for (let i = 0; i < items.length; i++) {
+    if (items[i] === item) {
+      result = true;
+      return cb(result);
+    } else {
+      result = false;
+      return cb(result);
+    }
+
+  }
+
 }
+
+function cb(result) {
+  console.log(result);
+}
+
+contains('Gum', items, cb);
 
 /* STRETCH PROBLEM */
 
