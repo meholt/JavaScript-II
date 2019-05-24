@@ -74,20 +74,18 @@ function contains(item, items, cb) {
     if (items[i] === item) {
       result = true;
       return cb(result);
-    } else {
+    } 
       result = false;
-      return cb(result);
     }
-
+    return cb(result);
   }
 
-}
 
 function cb(result) {
   console.log(result);
 }
 
-contains('Gum', items, cb);
+contains('Notebook', items, cb);
 
 /* STRETCH PROBLEM */
 
